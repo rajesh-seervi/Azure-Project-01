@@ -41,8 +41,6 @@
 			{
 				"name": "SQLToDatalake",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "current",
@@ -108,7 +106,7 @@
 							"container": "bronze",
 							"folder": "User",
 							"file": {
-								"value": "concat(@{pipeline().parameters.table},'_',variables('current'))",
+								"value": "@concat(pipeline().parameters.table,'_',variables('current'))",
 								"type": "Expression"
 							}
 						}
@@ -118,8 +116,6 @@
 			{
 				"name": "current",
 				"type": "SetVariable",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureOutput": false,
