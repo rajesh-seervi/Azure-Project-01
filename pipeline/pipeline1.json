@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "last_cdc",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -49,7 +49,7 @@
 						]
 					},
 					{
-						"activity": "Lookup1",
+						"activity": "last_cdc",
 						"dependencyConditions": [
 							"Succeeded"
 						]
